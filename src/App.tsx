@@ -1,21 +1,22 @@
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
-import Pokemon from './Pokemon/Pokemon';
+import { ImageBackground, StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import background from "../src/assets/background.png"
+import Pokemon from './Pokemon/Pokemon';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ImageBackground source={background} resizeMode='cover' style={styles.background}>
         <Pokemon />
       </ImageBackground>
 
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 30
   },
   background: {
     height: "100%",
